@@ -214,7 +214,7 @@ class StudentAttendanceController extends Controller
         return view('backend.attendance.student.add', compact(
             'academic_years',
             'classes',
-            'sections',
+            // 'sections',
             'students',
             'class_name',
             'academic_year',
