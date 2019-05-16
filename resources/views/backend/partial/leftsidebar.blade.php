@@ -247,6 +247,24 @@
         </ul>
       </li>
       @endrole
+   @role('Admin')
+     <li class="treeview">
+           <a href="#">
+          <i class="fa fa-user-secret"></i>
+          <span>Fees</span>
+          <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+        </a>
+          <ul class="treeview-menu">
+            <li><a href=""><i class="fa fa-circle-o"></i>Student Fees</a></li>
+            <li ><a href=""><i class="fa fa-circle-o"></i> Fees Collection</a></li>
+            <li ><a href=""><i class="fa fa-circle-o"></i> Fees List</a></li>
+            <li ><a href=""><i class="fa fa-circle-o"></i> Fees Setup</a></li>
+            <li ><a href=""><i class="fa fa-circle-o"></i> Fee Collection Report</a></li>
+          </ul>
+    </li>
+   @endrole
       @can('user.index')
         <li>
           <a href="{{ URL::route('user.index') }}">
