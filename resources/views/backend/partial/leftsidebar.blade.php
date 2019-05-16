@@ -251,7 +251,7 @@
      <li class="treeview">
            <a href="#">
           <i class="fa fa-user-secret"></i>
-          <span>Fees</span>
+          <span>gggg</span>
           <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
