@@ -1034,9 +1034,45 @@ class PermissionTableSeeder extends Seeder
             // Report
         ];
 
+
+          $feesPermissionList = [
+            // Fees
+            [
+                "slug" => "student.fee.setup",
+                "name" => "Student Fees Setup",
+                "group" => "Fees"
+            ],
+            [
+                "slug" => "student.fee.setuppost",
+                "name" => "Student Fees Setup Set",
+                "group" => "Fees"
+            ]
+			  [
+                "slug" => "student.fee.setuplist",
+                "name" => "Student Fees Setup List",
+                "group" => "Fees"
+            ]
+			  [
+                "slug" => "student.feessetup_edit",
+                "name" => "Student Fees Setup edit",
+                "group" => "Fees"
+             ]
+			  [
+                "slug" => "student.feessetup_update",
+                "name" => "Student Fees Setup Update",
+                "group" => "Fees"
+            ]
+			  [
+                "slug" => "student.feessetup_destroy",
+                "name" => "Student Fees Setup Delete",
+                "group" => "Fees"
+            ]
+            // Fees
+        ];
+
         //merge all permissions and insert into db
         $permissions = array_merge($commonPermissionList, $administratorPermissionList, $onlyAdminPermissions,
-            $academicPermissionList, $websitePermissionList, $hrmPermissionList, $examPermissionList, $reportsPermissionList);
+            $academicPermissionList, $websitePermissionList, $hrmPermissionList, $examPermissionList, $reportsPermissionList,$feesPermissionList);
 
         echo PHP_EOL , 'seeding permissions...';
 
