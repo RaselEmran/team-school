@@ -1046,27 +1046,33 @@ class PermissionTableSeeder extends Seeder
                 "slug" => "student.fee.setuppost",
                 "name" => "Student Fees Setup Set",
                 "group" => "Fees"
-            ]
+            ],
 			  [
                 "slug" => "student.fee.setuplist",
                 "name" => "Student Fees Setup List",
                 "group" => "Fees"
-            ]
+            ],
 			  [
                 "slug" => "student.feessetup_edit",
                 "name" => "Student Fees Setup edit",
                 "group" => "Fees"
-             ]
+             ],
 			  [
                 "slug" => "student.feessetup_update",
                 "name" => "Student Fees Setup Update",
                 "group" => "Fees"
-            ]
+            ],
 			  [
                 "slug" => "student.feessetup_destroy",
                 "name" => "Student Fees Setup Delete",
                 "group" => "Fees"
-            ]
+            ],
+
+                  [
+                "slug" => "student.fee.collection",
+                "name" => "Student FeeCollection",
+                "group" => "Fees"
+            ],
             // Fees
         ];
 

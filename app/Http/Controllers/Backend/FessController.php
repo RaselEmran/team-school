@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\FeeSetup;
 use App\Http\Controllers\Controller;
 use App\IClass;
+use App\Section;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\View;
 use Redirect;
@@ -97,6 +98,7 @@ class FessController extends Controller {
 
 	public function getCollection() {
 		$classes = IClass::orderby('id', 'asc')->get();
+		$section =Section::all();
 		return View::Make('backend.fees.feeCollection', compact('classes'));
 	}
 }
