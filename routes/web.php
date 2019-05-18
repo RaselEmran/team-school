@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Session;
-use App\Http\Helpers\AppHelper;
+use App\Http\Helpers\AppHelper; 
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -352,10 +352,26 @@ Route::group(
         ->name('report.student_monthly_attendance');
     Route::any('report/student-list', 'ReportController@studentList')
         ->name('report.student_list');
+  //Fees
+    Route::get('/fees/setup/list','FessController@getsetuplist')->name('student.fee.setuplist'); 
+    Route::get('/fees/setup','FessController@getsetup')->name('student.fee.setup');    
+    Route::post('/fees/setup','FessController@postsetup')->name('student.fee.setuppost');
+	Route::get('/fees/setup/edit/{id}','FessController@feessetup_edit')->name('student.feessetup_edit'); 
+	Route::post('/fees/setup/edit','FessController@feessetup_update')->name('student.feessetup_update'); 
+    Route::post('/fees/setup/delete/','FessController@feessetup_destroy')->name('student.feessetup_destroy');
+	
+	 Route::get('/fees/collection','FessController@getCollection')->name('student.fee.collection'); 
+
+    
 
 }
 );
 
+Route::group(
+    ['namespace' => 'Backend', 'middleware' => ['auth']], function () {
+  //student fee
+      
+  });      
 
 //change website locale
 Route::get(
@@ -436,10 +452,10 @@ Route::get(
         return 'Wrong code!';
     }
 
-    //check if developer mode enabled?
-    if(!env('DEVELOPER_MODE_ENABLED', false)) {
-        return "Please enable developer mode in '.env' file.".PHP_EOL."set 'DEVELOPER_MODE_ENABLED=true'";
-    }
+    // check if developer mode enabled?
+    // if(!env('DEVELOPER_MODE_ENABLED', false)) {
+    //     return "Please enable developer mode in '.env' file.".PHP_EOL."set 'DEVELOPER_MODE_ENABLED=true'";
+    // }
 
     $exitCode = Artisan::call('cache:clear');
     $exitCode = Artisan::call('config:clear');

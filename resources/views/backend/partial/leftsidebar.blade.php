@@ -248,7 +248,7 @@
       </li>
       @endrole
    @role('Admin')
-     <li class="treeview">
+     <li class="treeview {{Request::is('fees*') ?'active':''}}">
            <a href="#">
           <i class="fa fa-user-secret"></i>
           <span>Fees</span>
@@ -258,9 +258,9 @@
         </a>
           <ul class="treeview-menu">
             <li><a href=""><i class="fa fa-circle-o"></i>Student Fees</a></li>
-            <li ><a href=""><i class="fa fa-circle-o"></i> Fees Collection</a></li>
+            <li ><a href="{{ route('student.fee.collection') }}"><i class="fa fa-circle-o"></i> Fees Collection</a></li>
             <li ><a href=""><i class="fa fa-circle-o"></i> Fees List</a></li>
-            <li ><a href=""><i class="fa fa-circle-o"></i> Fees Setup</a></li>
+            <li class="{{Request::is('fees/setup*') ?'active':''}}" ><a href="{{ route('student.fee.setuplist') }}"><i class="fa fa-circle-o"></i> Fees Setup</a></li>
             <li ><a href=""><i class="fa fa-circle-o"></i> Fee Collection Report</a></li>
           </ul>
     </li>

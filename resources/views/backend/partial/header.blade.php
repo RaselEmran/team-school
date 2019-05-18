@@ -21,12 +21,12 @@
       </a>
 
       <div class="navbar-custom-menu">
-        <ul class="nav navbar-nav">    
+        <ul class="nav navbar-nav">
           <li class="clock-menu hidden-xs tablet-hidden">
             <a href="#0">
                 <p class="smsclock"><span id="date"></span> || <span id="clock"></span></p>
             </a>
-          </li>     
+          </li>
           <!-- Site Start -->
             @if($frontend_website)
         <li class="dropdown site-menu">
@@ -46,11 +46,11 @@
                 <li>
                         <ul class="menu notification_top">
                         </ul>
-                      
+
                 </li>
                 <li class="footer"><a href="{{route('user.notification_unread')}}">See All Notifications</a></li>
             </ul>
-        </li>                                                  
+        </li>
           @if($show_language)
         <li class="dropdown lang-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -115,7 +115,7 @@
             </div>
         </li>
     </ul>
-</li>         
+</li>
           <!-- Control Sidebar Toggle Button -->
           <li>
             <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
